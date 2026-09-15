@@ -1,0 +1,40 @@
+# REST API Nexus
+
+REST API для работы с пользователями.
+
+## Стек
+
+- Python
+- FastAPI
+- PostgreSQL
+- SQLAlchemy
+- Pydantic
+- pytest
+
+## Возможности
+
+- GET пользователя
+- создание пользователя
+- полное обновление через PUT
+- частичное обновление через PATCH
+- удаление пользователя
+- валидация данных
+- API-тесты через TestClient
+
+## Запуск
+
+...
+
+## Тесты
+
+pytest -v
+
+## API
+
+| Method | Endpoint |
+|--------|----------|
+| GET | /users/{id} |
+| POST | /users |
+| PUT | /users/{id} |
+| PATCH | /users/{id} |
+| DELETE | /users/{id} |

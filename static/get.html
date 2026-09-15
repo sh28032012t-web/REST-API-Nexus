@@ -1,0 +1,150 @@
+<!doctype html>
+
+<html lang="ru">
+
+<head>
+
+    <meta charset="utf-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1"
+    >
+
+    <title>GET // REST.NEXUS</title>
+
+    <link
+        rel="stylesheet"
+        href="/static/styles.css"
+    >
+
+</head>
+
+
+<body class="get-page">
+
+
+<header class="topbar">
+
+    <a
+        class="logo"
+        href="/"
+    >
+        <span>◈</span>
+        REST<span class="muted">.NEXUS</span>
+    </a>
+
+
+    <nav>
+
+        <a
+            class="nav-btn get active"
+            href="/get.html"
+        >
+            GET
+        </a>
+
+        <a
+            class="nav-btn post"
+            href="/post.html"
+        >
+            POST
+        </a>
+
+        <a
+            class="nav-btn patch"
+            href="/patch.html"
+        >
+            PATCH
+        </a>
+
+        <a
+            class="nav-btn put"
+            href="/put.html"
+        >
+            PUT
+        </a>
+
+        <a
+            class="nav-btn delete"
+            href="/delete.html"
+        >
+            DELETE
+        </a>
+
+    </nav>
+
+</header>
+
+
+<main class="panel">
+
+    <a
+        class="back"
+        href="/"
+    >
+        ← На главную
+    </a>
+
+
+    <div class="eyebrow">
+        01 // READ
+    </div>
+
+
+    <h1 class="gradient-title blue">
+        Получить пользователя
+    </h1>
+
+
+    <p class="subtitle">
+        Отправь GET-запрос и получи
+        пользователя из своей БД.
+    </p>
+
+
+    <section class="console">
+
+        <label>
+
+            ID пользователя
+
+            <input
+                id="getId"
+                type="number"
+                min="1"
+                value="1"
+            >
+
+        </label>
+
+
+        <button
+            class="action blue"
+            onclick="getUser()"
+        >
+            Отправить GET запрос
+            <span>→</span>
+        </button>
+
+
+        <div class="response-head">
+
+            RESPONSE
+
+            <span id="getStatus"></span>
+
+        </div>
+
+
+        <pre id="getOutput">Здесь появится ответ сервера...</pre>
+
+    </section>
+
+</main>
+
+
+<script src="/static/script.js"></script>
+
+</body>
+</html>

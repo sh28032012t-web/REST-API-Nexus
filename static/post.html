@@ -1,0 +1,190 @@
+<!doctype html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>POST // REST.NEXUS</title>
+
+    <link
+        rel="stylesheet"
+        href="/static/styles.css"
+    >
+</head>
+
+<body class="post-page">
+
+<header class="topbar">
+
+    <a
+        class="logo"
+        href="/"
+    >
+        <span>◈</span>
+        REST<span class="muted">.NEXUS</span>
+    </a>
+
+    <nav>
+
+        <a
+            class="nav-btn get"
+            href="/get.html"
+        >
+            GET
+        </a>
+
+        <a
+            class="nav-btn post active"
+            href="/post.html"
+        >
+            POST
+        </a>
+
+        <a
+            class="nav-btn patch"
+            href="/patch.html"
+        >
+            PATCH
+        </a>
+
+        <a
+            class="nav-btn put"
+            href="/put.html"
+        >
+            PUT
+        </a>
+
+        <a
+            class="nav-btn delete"
+            href="/delete.html"
+        >
+            DELETE
+        </a>
+
+    </nav>
+
+</header>
+
+
+<main class="panel">
+
+    <a
+        class="back"
+        href="/"
+    >
+        ← На главную
+    </a>
+
+
+    <div class="eyebrow">
+        02 // CREATE
+    </div>
+
+
+    <h1 class="gradient-title green">
+        Создать пользователя
+    </h1>
+
+
+    <p class="subtitle">
+        Заполни данные нового пользователя
+        и отправь POST-запрос в базу данных.
+    </p>
+
+
+    <section class="console form-grid">
+
+
+        <!-- FIRST NAME -->
+
+        <label>
+
+            Имя
+
+            <input
+                id="postFirstName"
+                type="text"
+                placeholder="Введите имя"
+                value="Bogdan"
+            >
+
+        </label>
+
+
+        <!-- LAST NAME -->
+
+        <label>
+
+            Фамилия
+
+            <input
+                id="postLastName"
+                type="text"
+                placeholder="Введите фамилию"
+                value="Shevchenko"
+            >
+
+        </label>
+
+
+        <!-- AGE -->
+
+        <label>
+
+            Возраст
+
+            <input
+                id="postAge"
+                type="number"
+                min="0"
+                max="150"
+                placeholder="Введите возраст"
+                value="14"
+            >
+
+        </label>
+
+
+        <!-- BUTTON -->
+
+        <button
+            class="action green"
+            onclick="postUser()"
+        >
+
+            Отправить POST запрос
+
+            <span>→</span>
+
+        </button>
+
+
+        <!-- RESPONSE -->
+
+        <div class="response-head">
+
+            RESPONSE
+
+            <span id="postStatus"></span>
+
+        </div>
+
+
+        <pre id="postOutput">Здесь появится ответ сервера...</pre>
+
+
+    </section>
+
+</main>
+
+
+<script src="/static/script.js"></script>
+
+</body>
+
+</html>

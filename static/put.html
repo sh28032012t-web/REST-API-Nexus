@@ -1,0 +1,207 @@
+<!doctype html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>PUT // REST.NEXUS</title>
+
+    <link
+        rel="stylesheet"
+        href="/static/styles.css"
+    >
+</head>
+
+<body class="put-page">
+
+<header class="topbar">
+
+    <a
+        class="logo"
+        href="/"
+    >
+        <span>◈</span>
+        REST<span class="muted">.NEXUS</span>
+    </a>
+
+    <nav>
+
+        <a
+            class="nav-btn get"
+            href="/get.html"
+        >
+            GET
+        </a>
+
+        <a
+            class="nav-btn post"
+            href="/post.html"
+        >
+            POST
+        </a>
+
+        <a
+            class="nav-btn patch"
+            href="/patch.html"
+        >
+            PATCH
+        </a>
+
+        <a
+            class="nav-btn put active"
+            href="/put.html"
+        >
+            PUT
+        </a>
+
+        <a
+            class="nav-btn delete"
+            href="/delete.html"
+        >
+            DELETE
+        </a>
+
+    </nav>
+
+</header>
+
+
+<main class="panel">
+
+    <a
+        class="back"
+        href="/"
+    >
+        ← На главную
+    </a>
+
+
+    <div class="eyebrow">
+        03 // UPDATE
+    </div>
+
+
+    <h1 class="gradient-title orange">
+        Изменить пользователя
+    </h1>
+
+
+    <p class="subtitle">
+        Укажи ID пользователя и новые
+        данные для обновления.
+    </p>
+
+
+    <section class="console form-grid">
+
+
+        <!-- ID -->
+
+        <label>
+
+            ID пользователя
+
+            <input
+                id="putId"
+                type="number"
+                min="1"
+                placeholder="Введите ID"
+                value="1"
+            >
+
+        </label>
+
+
+        <!-- FIRST NAME -->
+
+        <label>
+
+            Имя
+
+            <input
+                id="putFirstName"
+                type="text"
+                placeholder="Введите имя"
+                value="Bogdan"
+            >
+
+        </label>
+
+
+        <!-- LAST NAME -->
+
+        <label>
+
+            Фамилия
+
+            <input
+                id="putLastName"
+                type="text"
+                placeholder="Введите фамилию"
+                value="Shevchenko"
+            >
+
+        </label>
+
+
+        <!-- AGE -->
+
+        <label>
+
+            Возраст
+
+            <input
+                id="putAge"
+                type="number"
+                min="0"
+                max="150"
+                placeholder="Введите возраст"
+                value="14"
+            >
+
+        </label>
+
+
+        <!-- BUTTON -->
+
+        <button
+            class="action orange"
+            onclick="putUser()"
+        >
+
+            Отправить PUT запрос
+
+            <span>→</span>
+
+        </button>
+
+
+        <!-- RESPONSE -->
+
+        <div class="response-head">
+
+            RESPONSE
+
+            <span id="putStatus"></span>
+
+        </div>
+
+
+        <pre id="putOutput">Здесь появится ответ сервера...</pre>
+
+
+    </section>
+
+</main>
+
+
+<script src="/static/script.js"></script>
+
+</body>
+
+</html>

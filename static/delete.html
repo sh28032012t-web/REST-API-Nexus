@@ -1,0 +1,152 @@
+<!doctype html>
+
+<html lang="ru">
+
+<head>
+
+    <meta charset="utf-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1"
+    >
+
+    <title>DELETE // REST.NEXUS</title>
+
+    <link
+        rel="stylesheet"
+        href="/static/styles.css"
+    >
+
+</head>
+
+
+<body class="delete-page">
+
+
+<header class="topbar">
+
+    <a
+        class="logo"
+        href="/"
+    >
+        <span>◈</span>
+        REST<span class="muted">.NEXUS</span>
+    </a>
+
+
+    <nav>
+
+        <a
+            class="nav-btn get"
+            href="/get.html"
+        >
+            GET
+        </a>
+
+        <a
+            class="nav-btn post"
+            href="/post.html"
+        >
+            POST
+        </a>
+
+        <a
+            class="nav-btn patch"
+            href="/patch.html"
+        >
+            PATCH
+        </a>
+
+        <a
+            class="nav-btn put"
+            href="/put.html"
+        >
+            PUT
+        </a>
+
+        <a
+            class="nav-btn delete active"
+            href="/delete.html"
+        >
+            DELETE
+        </a>
+
+    </nav>
+
+</header>
+
+
+<main class="panel">
+
+    <a
+        class="back"
+        href="/"
+    >
+        ← На главную
+    </a>
+
+
+    <div class="eyebrow">
+        04 // REMOVE
+    </div>
+
+
+    <h1 class="gradient-title red">
+        Удалить пользователя
+    </h1>
+
+
+    <p class="subtitle">
+        Укажи ID пользователя
+        и удали его из базы данных.
+    </p>
+
+
+    <section class="console">
+
+
+        <label>
+
+            ID пользователя
+
+            <input
+                id="deleteId"
+                type="number"
+                min="1"
+                value="1"
+            >
+
+        </label>
+
+
+        <button
+            class="action red"
+            onclick="deleteUser()"
+        >
+            Отправить DELETE запрос
+            <span>→</span>
+        </button>
+
+
+        <div class="response-head">
+
+            RESPONSE
+
+            <span id="deleteStatus"></span>
+
+        </div>
+
+
+        <pre id="deleteOutput">Здесь появится ответ сервера...</pre>
+
+
+    </section>
+
+</main>
+
+
+<script src="/static/script.js"></script>
+
+</body>
+</html>
